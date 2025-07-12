@@ -127,7 +127,7 @@ function DropDown() {
                   toggleDropDown();
                 }}
               >
-                {`GitHub `}
+              {`GitHub ${stars !== null ? `(${stars})` : ""}`}
               </Button>
             </a>
           </li>
