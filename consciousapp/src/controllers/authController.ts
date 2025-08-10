@@ -27,6 +27,7 @@ export const signup = async (req: Request, res: Response): Promise<void> => {
       res.status(500).json({ message: "User name is taken" });
     }
   } catch (err) {
+    console.log(err)
     res.status(500).json({ message: "Internal server error" });
   }
 };

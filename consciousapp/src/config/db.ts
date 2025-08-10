@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 export const connectDatabase = async (): Promise<void> => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/superconscious");
+    await mongoose.connect("mongodb://admin:secret@localhost:27017/mydb?authSource=admin");
     console.log("Connected to MongoDB");
   } catch (error) {
     console.log("Error connecting to MongoDB");

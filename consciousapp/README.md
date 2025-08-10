@@ -43,7 +43,7 @@
    Create a `.env` file in the root directory and add the following variables:
    ```env
    PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/superconscious
+   MONGODB_URI=
    GEMINI_API_KEY=
    PINECONE_API_KEY=
    PINECONE_ENVIRONMENT=index region
@@ -67,4 +67,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ### Contact
 
-For any inquiries or support, please contact [Sreyas Cheviri](https://github.com/praverbajaj).
