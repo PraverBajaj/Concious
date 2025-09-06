@@ -14,12 +14,15 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.0",
     "@mui/material": "^6.4.0",
+    "@radix-ui/react-slot": "^1.2.3",
     "@reduxjs/toolkit": "^2.6.1",
     "axios": "^1.7.9",
     "caniuse-lite": "^1.0.30001722",
     "clsx": "^2.1.1",
     "env": "^0.0.2",
+    "framer-motion": "^12.23.12",
     "lucide-react": "^0.471.1",
+    "motion": "^12.23.12",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-quill": "^2.0.0",
@@ -27,7 +30,9 @@
     "react-router-dom": "^7.1.5",
     "react-social-media-embed": "^2.5.18",
     "react-tweet": "^3.2.2",
-    "react-twitter-embed": "^4.0.4"
+    "react-twitter-embed": "^4.0.4",
+    "simplex-noise": "^4.0.3",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

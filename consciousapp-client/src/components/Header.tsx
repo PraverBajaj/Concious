@@ -3,10 +3,8 @@ import { Button } from "./Button";
 import AddIcon from "@mui/icons-material/Add";
 import axios from "axios";
 import DropDown from "./DropDown";
-import { PushButtons } from "./PushButtons";
-import { PanelLeftOpen } from "lucide-react";
 import { useAppDispatch } from "../store/hooks";
-import { setModalOpen, setShareModalOpen, setPanelOpen, setShareUrl } from "../store/features/uiSlice";
+import { setModalOpen, setShareModalOpen, setShareUrl } from "../store/features/uiSlice";
 import { useNavigate } from "react-router-dom";
 
 const API_URL =  import.meta.env.VITE_API_URL || "http://localhost:3000";
@@ -42,16 +40,6 @@ export const Header = ({ isSharedView = false }: HeaderProps) => {
 
   return (
     <>
-      <div className="fixed left-2 md:left-4 bottom-8 z-40">
-      {!isSharedView && (
-        <PushButtons 
-          variant="transparent" 
-          icon={<PanelLeftOpen className="w-5 h-5"/>} 
-          onClick={() => dispatch(setPanelOpen(true))} 
-          size="sm"
-        /> )}
-      </div>
-
       <header className="sticky top-0 w-full bg-zinc-900 z-40 dark:bg-zinc-300 backdrop-blur-md shadow-2xl shadow-black/50 dark:shadow-zinc-400/50 rounded-b-2xl ">
         <div className="flex  flex-col md:flex-row gap-3 items-center justify-between px-4 py-3">
           <div className="flex items-start gap-2 ">

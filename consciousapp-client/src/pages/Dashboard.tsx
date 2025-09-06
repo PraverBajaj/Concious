@@ -1,7 +1,6 @@
 import Card from "../components/Card";
 import { Modal } from "../components/Modal";
 import { useState, useCallback, useEffect } from "react";
-import { Sidebar } from "../components/SideBar";
 import SearchBox from "../components/SearchBox";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -21,7 +20,6 @@ import { useAppSelector, useAppDispatch } from "../store/hooks";
 import {
   setModalOpen,
   setShareModalOpen,
-  setPanelOpen,
   setShareUrl,
   setIsSharing,
 } from "../store/features/uiSlice";
@@ -63,7 +61,7 @@ export function Dashboard() {
   // Get UI state from Redux
   const isModalOpen = useAppSelector((state) => state.ui.isModalOpen);
   const isShareModalOpen = useAppSelector((state) => state.ui.isShareModalOpen);
-  const isPanelOpen = useAppSelector((state) => state.ui.isPanelOpen);
+  // const isPanelOpen removed
   const shareUrl = useAppSelector((state) => state.ui.shareUrl);
   const isSharing = useAppSelector((state) => state.ui.isSharing);
   const dispatch = useAppDispatch();
@@ -264,7 +262,7 @@ export function Dashboard() {
   };
 
   useEffect(() => {
-    if (isModalOpen || Copen || isShareModalOpen || isPanelOpen) {
+    if (isModalOpen || Copen || isShareModalOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -272,7 +270,7 @@ export function Dashboard() {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [isModalOpen, isShareModalOpen, Copen, isPanelOpen]);
+  }, [isModalOpen, isShareModalOpen, Copen]);
 
   function greetings() {
     const time = new Date().getHours();
@@ -286,14 +284,9 @@ export function Dashboard() {
     <main className="min-h-screen">
       <div className="flex justify-center items-center">
         <article className="flex flex-col justify-center items-center max-w-6xl w-full px-4">
-          <Sidebar
-            openpanel={isPanelOpen}
-            closepanel={() => dispatch(setPanelOpen(false))}
-          />
-
           <div
             className={`flex flex-col justify-center items-center max-w-6xl w-full  ${
-              isModalOpen || Copen || isShareModalOpen || isPanelOpen
+              isModalOpen || Copen || isShareModalOpen
                 ? "blur-[1.5px]"
                 : ""
             }`}
@@ -354,7 +347,7 @@ export function Dashboard() {
                       onClick={() => {
                         fetchContent();
                         setAnswer("");
-                        setSearchText(""); // Add this linesetSearchText("");  // Add this line
+                        setSearchText(""); 
                       }}
                     />
                   </div>
@@ -423,7 +416,7 @@ export function Dashboard() {
                     </div>
                   ))
               ) : (
-                <div className="flex items-center justify-center md:h-80  md:w-96 text-gray-500">
+                <div className="flex items-center justify-center md:h-70  md:w-96 text-gray-500">
                   No content found. Add some content to get started.
                 </div>
               )}
