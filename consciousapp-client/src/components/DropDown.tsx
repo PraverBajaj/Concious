@@ -111,7 +111,7 @@ function DropDown() {
             className="px-1 py-1  dark:border-zinc-400 w-full cursor-pointer"
           >
             <a
-              href="https://github.com/praverbajaj/superconscious"
+              href="https://github.com/praverbajaj/concious"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-start gap-2 text-nowrap"

@@ -19,7 +19,7 @@
 </p>
 
 
-## BE repo -> [backend repositry - consciousApp](https://github.com/praverbajaj/superconscious)
+## BE repo -> [backend repositry - consciousApp](https://github.com/praverbajaj/conscious)
 
 
 
@@ -28,12 +28,12 @@ To install and set up the project, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/praverbajaj/superconscious-client.git
+    git clone https://github.com/praverbajaj/conscious-client.git
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd superconscious-client
+    cd conscious-client
     ```
 
 3. Install the dependencies:
