@@ -21,7 +21,7 @@
   </div>
 </p>
 
-## FE repo -> [conscious-client](https://github.com/praverbajaj/superconscious-client).
+## FE repo -> [conscious-client](https://github.com/praverbajaj/conscious-client).
 
 
 
@@ -30,8 +30,8 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/praverbajaj/superconscious.git
-   cd superconscious
+   git clone https://github.com/PraverBajaj/Concious.git
+   cd conscious
    ```
 
 3. **Install dependencies:**
